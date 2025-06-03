@@ -1,0 +1,14 @@
+[package]
+name = "fastnd"
+version = "0.0.1-beta"
+edition = "2024"
+authors = ["Umang Surana <teencoder@github.io"]
+
+description = "A numpy alternative made in rust, for rust"
+license = "MIT"
+readme = "README.md"
+
+
+[dependencies]
+bon = "3.6.3"
+tokio = "1.45.1"
