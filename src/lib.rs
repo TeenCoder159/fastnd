@@ -1,14 +1,24 @@
-pub fn add(left: u64, right: u64) -> u64 {
-    left + right
+pub fn zeroes(count: usize) -> Vec<isize>{
+    let mut arr: Vec<isize> = vec![];
+    for _ in 0..count{
+        arr.push(0);
+    }
+    arr
 }
 
-// #[cfg(test)]
-// mod tests {
-//     use super::*;
+// pub fn linspace(start: i32, end: i32, step: i32) -> Result<Vec<isize>, >
+ #[cfg(test)]
+ mod tests {
+     use super::*;
 
-//     #[test]
-//     fn it_works() {
-//         let result = add(2, 2);
-//         assert_eq!(result, 4);
-//     }
-// }
+     #[test]
+     fn zero_fn_test() {
+         let result = zeroes(2);
+         assert_eq!(result, vec![0,0]);
+     }
+
+     #[test]
+     fn temp_test(){
+        assert_eq!(zeroes(0), vec![])
+     }
+ }
