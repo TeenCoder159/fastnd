@@ -11,4 +11,5 @@ readme = "README.md"
 
 [dependencies]
 bon = "3.6.3"
+thiserror = "2.0.12"
 tokio = "1.45.1"
