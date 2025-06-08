@@ -1,5 +1,1 @@
-mod errors;
-
-fn main() {
-
-}
+fn main() {}

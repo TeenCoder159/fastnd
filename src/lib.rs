@@ -1,24 +1,36 @@
-pub fn zeroes(count: usize) -> Vec<isize>{
+mod tests;
+
+pub fn zeroes(count: usize) -> Vec<isize> {
     let mut arr: Vec<isize> = vec![];
-    for _ in 0..count{
+    for _ in 0..count {
         arr.push(0);
     }
     arr
 }
 
-// pub fn linspace(start: i32, end: i32, step: i32) -> Result<Vec<isize>, >
- #[cfg(test)]
- mod tests {
-     use super::*;
+pub fn linspace(start: isize, end: isize, step: isize) -> Vec<isize> {
+    if step == 0 {
+        return vec![];
+    }
 
-     #[test]
-     fn zero_fn_test() {
-         let result = zeroes(2);
-         assert_eq!(result, vec![0,0]);
-     }
+    let mut output: Vec<isize> = vec![];
 
-     #[test]
-     fn temp_test(){
-        assert_eq!(zeroes(0), vec![])
-     }
- }
+    let mut min = start;
+    let mut max = end;
+
+    if step < 0 {
+        min = end;
+        max = start;
+    }
+
+    for i in min..max {
+        if (i - start) % step == 0 {
+            output.push(i);
+        }
+    }
+
+    output
+}
+
+
+
