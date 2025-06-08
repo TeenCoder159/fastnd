@@ -9,19 +9,16 @@ license = "MIT"
 readme = "README.md"
 
 
-[dependencies]
-bon = "3.6.3"
-rand = "0.9.1"
-thiserror = "2.0.12"
-tokio = "1.45.1"
-
-
 # Cargo.toml
 [lib]
 name = "fastnd"
-path = "src/lib.rs"
+# "cdylib" is necessary to produce a shared library for Python to import from.
+#
+# Downstream Rust code (including code in `bin/`, `examples/`, and `tests/`) will not be able
+# to `use string_sum;` unless the "rlib" or "lib" crate type is also included, e.g.:
+# crate-type = ["cdylib", "rlib"]
+crate-type = ["cdylib"]
 
-[[bin]]
-name = "fastnd-bin"
-path = "src/main.rs"
-test = false
+[dependencies.pyo3]
+version = "0.25.0"
+features = ["extension-module"]
