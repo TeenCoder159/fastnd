@@ -1,11 +1,7 @@
 mod tests;
 
 pub fn zeroes(count: usize) -> Vec<isize> {
-    let mut arr: Vec<isize> = vec![];
-    for _ in 0..count {
-        arr.push(0);
-    }
-    arr
+    vec![0; count]
 }
 
 pub fn linspace(start: isize, end: isize, step: isize) -> Vec<isize> {
@@ -31,6 +27,3 @@ pub fn linspace(start: isize, end: isize, step: isize) -> Vec<isize> {
 
     output
 }
-
-
-
