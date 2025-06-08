@@ -1,5 +1,0 @@
-mod errors;
-
-fn main() {
-
-}
