@@ -13,9 +13,7 @@ mod tests {
 
     #[test]
     fn linspace_test() {
-        assert_eq!(linspace(0, 5, 2), vec![0,2, 4]);
-        assert_eq!(linspace(2, 10, 3), vec![2, 5, 8]);  
+        assert_eq!(linspace(0, 5, 2), vec![0, 2, 4]);
+        assert_eq!(linspace(2, 10, 3), vec![2, 5, 8]);
     }
-
-
 }

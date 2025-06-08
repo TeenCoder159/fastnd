@@ -11,5 +11,17 @@ readme = "README.md"
 
 [dependencies]
 bon = "3.6.3"
+rand = "0.9.1"
 thiserror = "2.0.12"
 tokio = "1.45.1"
+
+
+# Cargo.toml
+[lib]
+name = "fastnd"
+path = "src/lib.rs"
+
+[[bin]]
+name = "fastnd-bin"
+path = "src/main.rs"
+test = false
