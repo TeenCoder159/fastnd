@@ -1,5 +1,5 @@
-use pyo3::prelude::*;
 use crate::utils::utils::zeroes;
+use pyo3::prelude::*;
 
 /// Formats the sum of two numbers as string.
 #[pyfunction(name = "zeros")]
